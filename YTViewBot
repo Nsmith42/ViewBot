@@ -1,0 +1,12 @@
+import webbrowser
+import time
+import pyautogui
+import random
+
+url = input("Enter the Video URL: ")
+amountOfViews = int(input("Enter amount of views desired: "))
+for i in range(amountOfViews):
+    num = random.randint(2, 20) # <-- can remove if using duration instead of num
+    webbrowser.open_new(url)
+    time.sleep(int(num)) # <-- can replace num with duration if specific time is desired
+    pyautogui.hotkey('ctrl', 'w')
